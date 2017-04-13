@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   end
 end
 
+    resources :jobs do
+      resources :resumes
+    end
+
 
   root 'jobs#index'
-
-
 end

@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
   gem 'devise'
   gem 'simple_form'
   gem 'will_paginate-bootstrap'
+  gem 'will_paginate'
   gem 'font-awesome-rails'
   gem 'carrierwave'
 

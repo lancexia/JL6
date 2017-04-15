@@ -2,19 +2,13 @@ class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy, :edit, :update]
   before_action :validate_search_key, only: [:search]
 
-  def show
-    @job = Job.find(params[:id])
-    if @job.is_hidden
-      flash[:warning] = "This Job already archieved"
-      redirect_to root_path
-    end
-  end
 
   def index
     @jobs = Job.paginate(:page => params[:page], :per_page => 8).where(:is_hidden => false).order("created_at DESC")
 
 
   end
+
 
   def new
     @job = Job.new
@@ -56,13 +50,18 @@ class JobsController < ApplicationController
   end
 
   def search
-    byebug
     if @query_string.present?
-      search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
+      search_result = Job.ransack(@search_criteria).result(:distinct => true)
       @jobs = search_result.paginate(:page => params[:page], :per_page => 5 )
     end
   end
-
+  def show
+    @job = Job.find(params[:id])
+    if @job.is_hidden
+      flash[:warning] = "This Job already archieved"
+      redirect_to root_path
+    end
+  end
 
   protected
 

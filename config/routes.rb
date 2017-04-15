@@ -20,6 +20,10 @@ end
       end
     end
 
+  namespace :account do
+   resources :jobs
+  end
+
 
   root 'jobs#index'
 end

@@ -18,6 +18,11 @@
     </ul>
 </div>
 
+<% if current_user && current_user.has_applied?(@job) %>
+  <%= link_to("Has Applied", new_job_resume_path(@job), class: "btn btn-info btn-sm
+              disabled", method: :get) %>
+<% end %>
+
 
 
 <table class="table table-boldered">

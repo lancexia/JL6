@@ -24,12 +24,12 @@ end
   namespace :account do
    resources :jobs
   end
-  
+
   resources :pages do
     collection do
       get :help
     end
   end
 
-  root 'jobs#index'
+  root 'welcome#index'
 end

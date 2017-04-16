@@ -9,6 +9,15 @@ class JobsController < ApplicationController
 
   end
 
+  def show
+    @job = Job.find(params[:id])
+    if @job.is_hidden
+      flash[:warning] = "This Job already archieved"
+      redirect_to root_path
+    end
+  end
+
+
 
   def new
     @job = Job.new
@@ -53,13 +62,6 @@ class JobsController < ApplicationController
     if @query_string.present?
       search_result = Job.ransack(@search_criteria).result(:distinct => true)
       @jobs = search_result.paginate(:page => params[:page], :per_page => 5 )
-    end
-  end
-  def show
-    @job = Job.find(params[:id])
-    if @job.is_hidden
-      flash[:warning] = "This Job already archieved"
-      redirect_to root_path
     end
   end
 

@@ -32,8 +32,9 @@
 <table class="table table-boldered">
     <thead>
         <tr>
-            <td>
-                职位</td>
+            <td>公司</td>
+            <td>地址</td>
+            <td>职位</td>
             <td>Salary</td>
             <td>发布时间</td>
         </tr>
@@ -42,6 +43,8 @@
     <tbody>
         <% @jobs.each do |job| %>
         <tr>
+          <td><%= job.companyname%> </td>
+          <td><%= job.location%></td>
             <td>
                 <%= link_to(job.title, job_path(job)) %>
             </td>

@@ -173,3 +173,24 @@
 .login-help{
   font-size: 12px;
 }
+
+.background_image {
+background-image: image-url(public/assets/11);
+}
+
+.input-group {
+       position: relative;
+       display: table;
+       border-collapse: separate;
+       width: 250px; //加上width
+   }
+
+   .form-group {
+       margin-bottom: 10px;
+       margin-top: 10px;
+       margin-right: 100px;
+    }
+
+    .form-inputs{
+      width: 390px;//登录弹窗宽度
+    }

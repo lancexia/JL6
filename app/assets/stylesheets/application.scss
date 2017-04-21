@@ -33,14 +33,14 @@
 }  //navbar 去掉圆角
 
 .navbar-default .navbar-brand {
-   color: #ffffff;//字体颜色
+   color: #e8eefc;//字体颜色
    padding: 10px 15px;//上下10px,左右15px
    line-height: 30px;//文字行高
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #FF6F00;//鼠标放置在链接上的文字颜色
+  color: #a1c1fc;//鼠标放置在链接上的文字颜色
   background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
 }
 
@@ -50,7 +50,7 @@
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #FF6F00;
+  color: #a1c1fc;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -63,7 +63,7 @@
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
-    background-color: #FFE0B2;
+    background-color: #f2f9ff;
     color: #212121;
 }
 
@@ -193,4 +193,15 @@ background-image: image-url(public/assets/11);
 
     .form-inputs{
       width: 390px;//登录弹窗宽度
+    }
+
+    html{height: 100%}
+    body{
+      min-height: 100%;
+      margin:0;
+      padding:0;
+      background-image: url(/assets/11.png) no-repeat;
+      background-position: cover;
+
+
     }

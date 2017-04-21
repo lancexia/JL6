@@ -27,39 +27,8 @@
               disabled", method: :get) %>
 <% end %>
 
-
-
-<table class="table table-boldered">
-    <thead>
-        <tr>
-            <td>公司</td>
-            <td>地址</td>
-            <td>职位</td>
-            <td>Salary</td>
-            <td>发布时间</td>
-        </tr>
-
-    </thead>
-    <tbody>
-        <% @jobs.each do |job| %>
-        <tr>
-          <td><%= job.companyname%> </td>
-          <td><%= job.location%></td>
-            <td>
-                <%= link_to(job.title, job_path(job)) %>
-            </td>
-            <td>
-                <%= job.wage_lower_bound %>~<%= job.wage_upper_bound %>
-            </td>
-            <td>
-                <%= job.created_at %>
-            </td>
-        </tr>
-        <% end %>
-    </tbody>
-
-
-</table>
+   <br><br>
+  <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
 
 <div class="text-center">
     <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>

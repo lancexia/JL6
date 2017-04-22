@@ -1,47 +1,52 @@
 <div class="col-md-12">
     <div class="row">
-        <div class="col-md-6" style="font-size:20px">
-          <p><%=  link_to(job.title, job_path(job)) %></p>
+        <div class="col-md-2">
+            <p></p>
         </div>
-        <div class="col-md-6">
-          <p></p>
+        <div class="col-md-2" style="font-size:20px">
+            <p><%=  link_to(job.title, job_path(job)) %></p>
+        </div>
+        <div class="col-md-4">
+            <p></p>
         </div>
     </div>
-      <div class="row">
-          <div class="col-md-2">
-          </div>
-          <div class="col-md-2">
-            <p><i class="fa fa-jpy fa-md" aria-hidden="true"></i>
-            <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %></p>
-          </div>
-          <div class="col-md-4">
-            <i class="fa fa-location-arrow" aria-hidden="true"  ></i>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <p>
+                <i class="fa fa-jpy fa-md" aria-hidden="true"></i>
+                <%= job.wage_lower_bound %>
+                ~
+                <%= job.wage_upper_bound %></p>
+        </div>
+        <div class="col-md-4">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
             <%= job.location %>
-          </div>
+        </div>
 
-          <div class="col-md-2">
+        <div class="col-md-2">
             <p></p>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-md-2">
-          </div>
-          <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
             <%= job.companyname %>
-          </div>
+        </div>
 
-          <div class="col-md-4">
-            <p><i class="fa fa-envelope" aria-hidden="true"></i> <%= job.contact_email %></p>
-          </div>
+        <div class="col-md-4">
+            <p>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <%= job.contact_email %></p>
+        </div>
 
-
-
-          <div class="col-md-2">
+        <div class="col-md-2">
             <span>
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <%= time_ago_in_words(job.created_at.strftime("%d %b. %Y")) %> ago
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <%= time_ago_in_words(job.created_at.strftime("%d %b. %Y")) %>
+                ago
             </span>
-          </div>
-      </div>
-      <hr>
+        </div>
+    </div>
+    <hr>
 </div>

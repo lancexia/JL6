@@ -1,10 +1,38 @@
+<br><br>
+
+<div class="container-fluid">
+  <div class="pull-right">
+    <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
+  </div>
+
+
 <h1> <%= @job.title %> </h1>
+<p class="info">
+    <span><%= @job.companyname %></span>
+    <span>|</span>
+    <span><span class="fa fa-jpy fa-md"><%= @job.wage_lower_bound %>~<%= @job.wage_upper_bound %></span></span>
+    <span>|</span>
+    <span><span class="fa fa-location-arrow"></span><%= @job.location %> </span>
+  </p>
+
+<hr>
+<br>
+
+<p style= "font-size:1.5em"><strong>职位详情：</strong></p>
 
 <p>
   <%= simple_format(@job.description) %>
 
 </p>
 
+
+
+<br><br><br><br><br><br><br>
+
 <div class="text-center">
-  <%= link_to("投交履历",new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+  <%= link_to("投交履历",new_job_resume_path(@job), class: "btn btn-default ") %>
+</div>
+
+<br><br><br><br><br><br><br>
+
 </div>

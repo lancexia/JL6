@@ -1,4 +1,7 @@
 <h3> 投交履历到 <%= @job.title %> </h3>
+<div class="pull-right">
+  <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
+</div>
 
 <hr>
 
@@ -6,5 +9,5 @@
   <%= f.input :content %>
   <%= f.input :attachment %>
 
-  <%= f.submit "送出" %>
+  <%= f.submit "送出", class: "button btn btn-default btn-lg" %>
 <% end %>

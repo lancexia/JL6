@@ -18,21 +18,24 @@
         <div class="job-table">
             <% @jobs.each do |job| %>
 
-            <div class="row jobs-show" style="font-size:1.5em">
-                <div class="col-md-12 ">
+            <div class="row jobs-show" style="font-size:2em">
+              <div class="col-md-4"></div>
+                <div class="col-md-8 ">
                     <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
                 </div>
             </div>
+
             <div class="row">
+              <div class="col-md-2"></div>
                 <div class="col-md-4">
                     <p>
                         <i class="fa fa-jpy fa-md" aria-hidden="true"></i>
-                        <%= job.wage_lower_bound %>
+                        <span class="label label-primary"><%= job.wage_lower_bound %></span>
                         ~
-                        <%= job.wage_upper_bound %></p>
+                        <span class="label label-primary"><%= job.wage_upper_bound %></span></p>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <i class="fa fa-location-arrow" aria-hidden="true"></i>
                     <%= job.location %>
                 </div>
@@ -43,17 +46,20 @@
             </div>
 
             <div class="row">
+              <div class="col-md-2"></div>
                 <div class="col-md-4">
                     <p>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <%= job.contact_email %></p>
                 </div>
-                <div class="col-md-4"></div>
+
+                <div class="col-md-2"></div>
                 <div class="col-md-4"></div>
 
             </div>
 
             <% end %>
+            <br>
         </div>
 
     </div>

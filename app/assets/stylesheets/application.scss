@@ -26,6 +26,18 @@
     margin-bottom: 0;//底部 margin 不撑开距离
 }
 
+.navbar-fixed-top{
+  top: 0px;
+}
+
+.navbar-fixed-top, .navbar-fix-bottom{
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
 @media (min-width: 768px) {
     .navbar {
         border-radius: 0;//圆角为0

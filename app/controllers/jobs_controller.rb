@@ -5,6 +5,8 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.paginate(:page => params[:page], :per_page => 8).where(:is_hidden => false).order("created_at DESC")
+    
+
 
 
   end

@@ -22,8 +22,8 @@
 
 
 .navbar-default {
-    background-color: #000000;//背景颜色  navbar设置
-    border-color: #000000;//边框色
+    background-color: transparent;//背景颜色  navbar设置
+    border-color: transparent;//边框色
     margin-bottom: 0;//底部 margin 不撑开距离
 }
 
@@ -254,6 +254,48 @@
     .push {
       height: 110px;
     }
+
+    //-------------------topbutton------//
+    #btn10{width: 40px; height: 40px; position:fixed; left:50%; margin-left:600px; bottom:30px; background:url(public/assets/top_bg.png);}
+
+
+//-------------sidebar----------------//
+.sidebar {
+    display: none;
+    position: fixed;
+    z-index: 998;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    margin-right: 10px;
+    height: auto;
+    line-height: 20px;
+}
+
+.sidebar li:first-child {
+    margin-top: 0;
+}
+
+.sidebar li {
+    position: relative;
+    display: block;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 8px;
+    background: #fbfbfb;
+    line-height: 42px;
+}
+
+.sidebar li.backtop i {
+    font-size: 18px;
+}
+
+.sidebar li i {
+    color: #555;
+}
 
 
 

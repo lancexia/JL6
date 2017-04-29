@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -2725,6 +2726,15 @@ lp.jQuery(function(){
 <div id="lp-pom-image-36-holder" class="lp-pom-image-holder"></div>
 <div id="lp-pom-image-37-holder" class="lp-pom-image-holder"></div>
 <div id="lp-pom-image-38-holder" class="lp-pom-image-holder"></div>
+
+<div id="sidebar" class="sidebar" style="display: block;">
+    <ul>
+      <li class="backtop" style="width: 40px;height: 45px; position: relative;"><i class="fa fa-arrow-circle-up"></i>
+        <a href=" " style="width: 40px;height: 45px; display: block; position: absolute; top: 0; left: 0; z-index: 999999;"></a >
+      </li>
+    </ul>
+  </div>
+
 <script type="text/javascript">
   function updateViewport() {
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -2789,3 +2799,17 @@ lp.jQuery().ready(function($) {
 <!-- lp:insertions end body:after -->
 </body>
 </html>
+
+<script>
+  $(document).ready(function() {
+      $('#navbar').css('background', 'transparent');
+  });
+
+$(window).scroll(function() {
+var value = $(this).scrollTop();
+if (value > 70)
+ $('#navbar').css('background', '#1B1C1D');
+else
+ $('#navbar').css('background', 'transparent');
+});
+</script>

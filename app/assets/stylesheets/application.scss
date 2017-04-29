@@ -20,10 +20,13 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.navbar {
+    backgound: transparent;
+}
 
 .navbar-default {
-    background-color: transparent;//背景颜色  navbar设置
-    border-color: transparent;//边框色
+    background-color: #222222;//背景颜色  navbar设置
+    border-color: #222222;//边框色
     margin-bottom: 0;//底部 margin 不撑开距离
 }
 
@@ -296,7 +299,6 @@
 .sidebar li i {
     color: #555;
 }
-
 
 
 

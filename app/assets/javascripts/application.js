@@ -16,6 +16,7 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap/modal
+//= require bootstrap/carousel
 //= require_tree .
 
 // $(document).on('click', '.working', function () {
